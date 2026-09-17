@@ -1,0 +1,17 @@
+site_name: "Flask-WhooshPeewee Documentation"
+nav:
+    - Home:
+        - Introduction: introduction.md
+        - Quickstart: quickstart.md
+theme:
+    name: readthedocs
+    highlightjs: True
+    locale: en
+    navigation_depth: 10
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
