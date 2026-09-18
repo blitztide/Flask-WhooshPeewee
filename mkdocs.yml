@@ -1,7 +1,7 @@
 site_name: "Flask-WhooshPeewee Documentation"
 nav:
     - Home:
-        - Introduction: introduction.md
+        - Introduction: index.md
         - Quickstart: quickstart.md
         - Updating Indexes: indexes.md
     - Examples:
