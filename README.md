@@ -1,5 +1,5 @@
 # Flask-WhooshPeewee
-
+[![Build](https://github.com/blitztide/Flask-WhooshPeewee/actions/workflows/pipeline.yml/badge.svg)](https://github.com/blitztide/Flask-WhooshPeewee/actions/workflows/pipeline.yml)
 Flask + Whoosh + peewee
 
 Flask-WhooshPeewee is a [Flask](https://flask.palletsprojects.com/en/stable/) extension that mixes the searching and indexing functionality of [Whoosh](https://whoosh.readthedocs.io/en/latest/index.html) with the Schema
