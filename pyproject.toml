@@ -13,6 +13,9 @@ dev = [
     "mkdocstrings-python>=2.0.8",
     "mkdocstrings>=1.0.6"
 ]
+test = [
+    "pytest>=9.1.1"
+]
 
 [build-system]
 requires = ["setuptools>=77"]
