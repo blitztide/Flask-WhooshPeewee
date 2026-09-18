@@ -1,3 +1,8 @@
+# Simple Search Example
+
+This is a simple search that performs query on a single model and returns a `SearchResult` as JSON
+
+```python
 from flask import Flask, request
 from WhooshPeewee import WhooshPeewee
 from models import db, User, Article, Course
@@ -106,3 +111,5 @@ def create_app():
     search.rebuild()
 
     return app
+
+```

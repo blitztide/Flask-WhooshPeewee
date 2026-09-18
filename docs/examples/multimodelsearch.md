@@ -1,3 +1,9 @@
+# Multi-Model Search
+
+This search will search across multiple models (`User`, `Article` and `Course`) and returns an aggregated result as JSON.
+
+
+```python
 from flask import Flask, request
 from WhooshPeewee import WhooshPeewee
 from models import db, User, Article, Course
@@ -18,12 +24,34 @@ def seed_db():
         ("Steve", "steve@steve.com"),
         ("Alan", "alan@alan.in"),
         ("Bob", "bob@burgers.co"),
-        ("Alice", "alice@cooper.com")]
+        ("Alice", "alice@cooper.com"),
+        ("Sewage Steve", "steve@sewage.works")]
 
     for name, email in users:
         User.create(
             username=name,
             email=email).save()
+
+    articles = [
+        ("A New article about flowers", "flowers are really cool and smell nice."),
+        ("Too much sewage", "Sewage is everywhere and I don't like the smell."),
+        ("New sewage outlet", "A New sewage outlet has been built in your town"),
+        ("Bees in local area", "Bees are pollinating flowers in the local area")
+    ]
+
+    for title, content in articles:
+        Article.create(
+            title=title,
+            body=content).save()
+
+    courses = [
+        ("Sewage Treatment Manager","Manage the lifecycle of sewage with this course, no more smelling like flowers"),
+        ("Burger Manager Course", "Learn how to open your own burger restaurant")]
+
+    for name, description in courses:
+        Course.create(
+            name=name,
+            description=description).save()
 
 def create_app():
     app = Flask(__name__)
@@ -88,6 +116,10 @@ def create_app():
 
         results = search.search(
             query,
+            models=[
+                User,
+                Article,
+                Course],
             limit=50,
         )
 
@@ -106,3 +138,5 @@ def create_app():
     search.rebuild()
 
     return app
+
+```

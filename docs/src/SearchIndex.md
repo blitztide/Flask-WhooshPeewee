@@ -1,0 +1,2 @@
+# SearchIndex
+:::WhooshPeewee.SearchIndex

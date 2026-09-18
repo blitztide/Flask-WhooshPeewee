@@ -3,6 +3,20 @@ nav:
     - Home:
         - Introduction: introduction.md
         - Quickstart: quickstart.md
+        - Updating Indexes: indexes.md
+    - Examples:
+        - Example Schema: examples/schema.md
+        - Simple Search: examples/search.md
+        - Multi Search: examples/multimodelsearch.md
+    - WhooshPeewee:
+        - WhooshPeewee: src/WhooshPeewee.md
+        - SearchIndex: src/SearchIndex.md
+        - MultiModelSearch: src/MultiModelSearch.md
+        - SearchResult: src/SearchResult.md
+    - CLI:
+        - rebuild: cli/rebuild.md
+    - Releases:
+        - 1.0.0: release-1.0.0.md
 theme:
     name: readthedocs
     highlightjs: True

@@ -1,0 +1,2 @@
+# MultiModelSearch
+:::WhooshPeewee.MultiModelSearch

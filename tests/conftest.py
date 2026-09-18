@@ -1,5 +1,5 @@
 import pytest
-
+from WhooshPeewee import WhooshPeewee
 from flask import Flask
 from peewee import (
     SqliteDatabase,
@@ -133,8 +133,6 @@ def app(database, models, tmp_path):
     """
     Create a Flask application configured with WhooshPeewee.
     """
-
-    from WhooshPeewee import WhooshPeewee
 
     User = models["User"]
     Article = models["Article"]

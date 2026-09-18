@@ -1,0 +1,2 @@
+# SearchResult
+:::WhooshPeewee.SearchResult

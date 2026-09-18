@@ -1,3 +1,5 @@
+from flask import request
+
 def test_extension_registers_indexes(search, models):
     User = models["User"]
     Article = models["Article"]
@@ -155,7 +157,6 @@ def test_search_endpoint(
 
     @app.get("/search")
     def search_view():
-        from flask import request
 
         query = request.args.get(
             "q",
