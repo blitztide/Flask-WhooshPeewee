@@ -2,6 +2,9 @@ name: Publish to pypi and test-pypi
 
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build distribution
